@@ -167,7 +167,7 @@ function filterData(rows){
   });
 
   // *** FIX 4: Sort chart data chronologically by the YYYY-MM-DD key ***
-  const chartData = Object.values(bd).sort((a,b) => a.sortKey.localeCompare(b.sortKey));
+try{const g=localStorage.getItem("goal-"+client.slug);S.goal=g?parseInt(g):client.monthlyTarget;}catch(e){S.goal=client.monthlyTarget;}
 
   return {
     totals:{
